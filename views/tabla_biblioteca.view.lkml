@@ -21,7 +21,7 @@ view: tabla_biblioteca {
     type: number
     sql:
 
-    CASE WHEN {{_user_attributes["codigo_tipo_usurio"]}} = 0
+    CASE WHEN {{_user_attributes["codigo_tipo_usurio"]}} = 1
 
     THEN ${TABLE}.Codigo_de_tipo_de_usuario
 
@@ -35,13 +35,13 @@ view: tabla_biblioteca {
 
     html:
 
-    {% if _user_attributes["codigo_tipo_usurio"] == 0 %}
+    {% if _user_attributes["codigo_tipo_usurio"] == 1 %}
 
           {{ rendered_value }}
 
       {% else %}
 
-       Sin permiso
+       no se puede
 
       {% endif %}  ;;
 
