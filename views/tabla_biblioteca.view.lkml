@@ -41,7 +41,7 @@ view: tabla_biblioteca {
 
       {% else %}
 
-       Carlitos
+       Sin permiso
 
       {% endif %}  ;;
 
