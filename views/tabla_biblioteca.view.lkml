@@ -19,7 +19,32 @@ view: tabla_biblioteca {
 
   dimension: codigo_de_tipo_de_usuario {
     type: number
-    sql: ${TABLE}.Codigo_de_tipo_de_usuario ;;
+    sql:
+
+    CASE WHEN {{_user_attributes["codigo_tipo_usurio"]}} = 1
+
+    THEN ${TABLE}.Codigo_de_tipo_de_usuario
+
+    ELSE
+
+    -1
+
+    END ;;
+
+
+
+    html:
+
+    {% if _user_attributes["codigo_tipo_usurio"] == 1 %}
+
+          {{ rendered_value }}
+
+      {% else %}
+
+      [Insufficient Permissions]
+
+      {% endif %}  ;;
+
   }
 
   dimension: definicion_de_tipo_de__usuario {
