@@ -41,7 +41,7 @@ view: tabla_biblioteca {
 
       {% else %}
 
-       no se puede
+       Sin permiso
 
       {% endif %}  ;;
 
