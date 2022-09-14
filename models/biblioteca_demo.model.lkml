@@ -14,5 +14,4 @@ explore: tabla_biblioteca {
   access_filter: {
     field: definicion_de_tipo_de__usuario
     user_attribute: tipo_usuario
-  }
-  }
+  } }
