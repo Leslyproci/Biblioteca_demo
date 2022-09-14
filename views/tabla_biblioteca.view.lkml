@@ -115,6 +115,6 @@ view: tabla_biblioteca {
   measure: total_pago {
     description: "total de pago"
     type: number
-    sql: ${pagos_totales}*15000 ;;
+    sql: sum(${pagos_totales}) ;;
   }
 }
