@@ -11,7 +11,4 @@ datagroup: biblioteca_demo_default_datagroup {
 persist_with: biblioteca_demo_default_datagroup
 
 explore: tabla_biblioteca {
-  access_filter: {
-    field: codigo_biblioteca
-    user_attribute: codigo_biblioteca
-  }}
+  }
