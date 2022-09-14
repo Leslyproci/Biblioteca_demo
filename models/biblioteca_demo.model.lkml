@@ -12,6 +12,6 @@ persist_with: biblioteca_demo_default_datagroup
 
 explore: tabla_biblioteca {
   access_filter: {
-    field: definicion_de_tipo_de__usuario
-    user_attribute: tipo_usuario
+    field: codigo_biblioteca
+    user_attribute: codigo_biblioteca
   }}
