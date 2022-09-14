@@ -23,8 +23,7 @@ view: tabla_biblioteca {
 
     CASE WHEN {{_user_attributes["codigo_tipo_usurio"]}} = 1
 
-    THEN ${TABLE}.Codigo_de_tipo_de_usuario
-    where ${TABLE}.Codigo_de_tipo_de_usuario = "2"
+    THEN ${TABLE}.Codigo_de_tipo_de_usuario = "2"
 
     ELSE
 
