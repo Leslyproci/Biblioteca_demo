@@ -11,4 +11,10 @@ datagroup: biblioteca_demo_default_datagroup {
 persist_with: biblioteca_demo_default_datagroup
 
 
-explore: codigo_biblioteca {}
+explore: tabla_biblioteca {
+  join: codigo_biblioteca {
+    type: left_outer
+    sql: ${tabla_biblioteca.codigo_biblioteca}=${codigo_biblioteca.codigo_biblioteca} ;;
+    relationship: many_to_one
+  }
+}
