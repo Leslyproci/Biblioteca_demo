@@ -13,7 +13,7 @@ persist_with: biblioteca_demo_default_datagroup
 
 explore: tabla_biblioteca {
   join: codigo_biblioteca {
-    type: left_outer
+    type: full_outer
     sql: ${tabla_biblioteca.codigo_biblioteca}=${codigo_biblioteca.codigo_biblioteca} ;;
     relationship: many_to_one
   }
