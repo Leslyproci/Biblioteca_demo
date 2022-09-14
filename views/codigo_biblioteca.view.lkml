@@ -1,18 +1,23 @@
 view: codigo_biblioteca {
+
   sql_table_name: `Demo.codigo_biblioteca`
     ;;
 
+
   dimension: codigo_biblioteca {
+    primary_key: yes
     type: string
     sql: ${TABLE}.Codigo_biblioteca ;;
   }
 
   dimension: departamento {
+    label: "Departamento"
     type: string
     sql: ${TABLE}.Departamento ;;
   }
 
   dimension: georeferencia {
+    label:"Georeferencia"
     type: string
     sql: ${TABLE}.Georeferencia ;;
   }

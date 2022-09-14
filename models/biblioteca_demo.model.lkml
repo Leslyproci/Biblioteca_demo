@@ -10,6 +10,5 @@ datagroup: biblioteca_demo_default_datagroup {
 
 persist_with: biblioteca_demo_default_datagroup
 
-explore: tabla_biblioteca {}
 
 explore: codigo_biblioteca {}
