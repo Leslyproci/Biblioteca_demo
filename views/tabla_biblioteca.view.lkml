@@ -3,21 +3,25 @@ view: tabla_biblioteca {
     ;;
 
   dimension: anio_registro_usuario_sistema {
+    label: "Año de registro del usuario"
     type: number
     sql: ${TABLE}.Anio_registro_usuario_sistema ;;
   }
 
   dimension: codigo_biblioteca {
+    label: "Codigo biblioteca"
     type: string
     sql: ${TABLE}.Codigo_biblioteca ;;
   }
 
   dimension: codigo_de_preferencia_de_aviso {
+    label: "Codigo de preferencia de aviso"
     type: string
     sql: ${TABLE}.Codigo_de_preferencia_de_aviso ;;
   }
 
   dimension: codigo_de_tipo_de_usuario {
+    label: "Codigo de tipo de usuario"
     type: number
     sql:
 
@@ -48,6 +52,7 @@ view: tabla_biblioteca {
   }
 
   dimension: definicion_de_tipo_de__usuario {
+    label: "Definicion de tipo de usuario"
     type: string
     sql: ${TABLE}.Definicion_de_tipo_de__usuario ;;
   }
@@ -68,36 +73,37 @@ view: tabla_biblioteca {
   }
 
   dimension: medio_de_preferenica_de_aviso {
+    label: "Medio de preferencia del aviso"
     type: string
     sql: ${TABLE}.Medio_de_preferenica_de_aviso ;;
   }
 
   dimension: pagos_totales {
+    label: "Numero de pagos"
     type: number
     sql: ${TABLE}.Pagos_totales ;;
   }
 
   dimension: proporciono_direccion_de_correo {
+    label: "Direccion de correo"
     type: string
     sql: ${TABLE}.Proporciono_direccion_de_correo ;;
   }
 
   dimension: rango_edad {
+    label: "Rango de edad"
     type: string
     sql: ${TABLE}.Rango_edad ;;
   }
 
   dimension: renovaciones_totales {
+    label: "Renovaciones"
     type: number
     sql: ${TABLE}.Renovaciones_totales ;;
   }
 
-  dimension: sede_registro {
-    type: string
-    sql: ${TABLE}.Sede_registro ;;
-  }
-
   dimension: vive_en_la_ciudad {
+    label: "Vive en la ciudad"
     type: string
     sql: ${TABLE}.vive_en_la_ciudad ;;
   }
@@ -105,5 +111,10 @@ view: tabla_biblioteca {
   measure: count {
     type: count
     drill_fields: []
+  }
+  measure: total_pago {
+    description: "total de pago"
+    type: number
+    sql: ${pagos_totales}*15000 ;;
   }
 }
