@@ -1,6 +1,7 @@
 view: tabla_biblioteca {
   sql_table_name: `Demo.tabla_biblioteca`
     ;;
+
   dimension: item {
     primary_key: yes
     type: number
@@ -122,4 +123,5 @@ measure: total_pago {
   type: number
   sql: sum(${pagos_totales}) ;;
 }
+
 }
