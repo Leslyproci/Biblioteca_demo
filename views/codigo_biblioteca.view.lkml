@@ -5,7 +5,6 @@ view: codigo_biblioteca {
 
 
   dimension: codigo_biblioteca {
-    primary_key: yes
     type: string
     sql: ${TABLE}.Codigo_biblioteca ;;
   }

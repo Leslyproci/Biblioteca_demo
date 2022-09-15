@@ -73,7 +73,6 @@ view: tabla_biblioteca {
   }
 
   dimension: item {
-    primary_key: yes
     type: number
     sql: ${TABLE}.Item ;;
   }
