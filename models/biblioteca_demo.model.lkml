@@ -15,6 +15,6 @@ explore: tabla_biblioteca {
   join: codigo_biblioteca {
     type: left_outer
     sql: ${codigo_biblioteca.codigo_biblioteca}=${tabla_biblioteca.codigo_biblioteca} ;;
-    relationship: one_to_many
+    relationship: many_to_one
   }
 }
